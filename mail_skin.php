@@ -68,14 +68,11 @@ class mail_skin extends rcube_plugin
 			fclose($fh);
 		}
 
-		write_log('mail_skin', $this->style_content);
 
 	}
 
 	function replace_identity_create($args)
 	{
-		write_log('mail_skin', 'function replace_identity_create appelee');
-		write_log('mail_skin', print_r($args, true));
 
 		if($args['record']['html_signature'] == '1')
 		{
@@ -89,8 +86,6 @@ class mail_skin extends rcube_plugin
 
 	function replace_identity_update($args)
 	{
-		write_log('mail_skin', 'function replace_identity_create appelee');
-		write_log('mail_skin', print_r($args, true));
 
 		if($args['record']['html_signature'] == '1')
 		{
